@@ -18,7 +18,7 @@ def generate_otp():
 def send_email(emailID, OTP):
     s = smtplib.SMTP('smtp.gmail.com',587)
     s.starttls()
-    s.login("adi01dev01@gmail.com","lpyk sphx smqf avpe")
+    s.login("Your Email ID","Your App Password")
     msg = OTP + " is your OTP. This is valid for 5 minutes."
     s.sendmail("&&&&&&&&&&&",emailID,msg)
     return True
@@ -31,7 +31,7 @@ class OTPApp:
         self.root.resizable(False, False)
         # self.root.configure(bg="#181818")
         
-        self.bg_image = ImageTk.PhotoImage(Image.open("D:/PROGRAMS/dabotics india/OTP Verification/Images/root_bg.jpg"))
+        self.bg_image = ImageTk.PhotoImage(Image.open("Images/root_bg.jpg"))
         self.bg_label = tk.Label(self.root, image=self.bg_image)
         self.bg_label.place(x=0, y=0, relwidth=1, relheight=1)
         self.bg_label.image = self.bg_image 
@@ -39,7 +39,7 @@ class OTPApp:
         self.panel = tk.Frame(root, width=320, height=420, bg="#1e1e1e", highlightthickness=1, highlightbackground="black")
         self.panel.place(x=240, y=40)
 
-        self.panel_bg_image = ImageTk.PhotoImage(Image.open("D:/PROGRAMS/dabotics india/OTP Verification/Images/panel_bg.jpg"))
+        self.panel_bg_image = ImageTk.PhotoImage(Image.open("Images/panel_bg.jpg"))
         self.panel_bg_label = tk.Label(self.panel, image=self.panel_bg_image)
         self.panel_bg_label.place(x=0, y=0, relwidth=1, relheight=1)
         self.panel_bg_label.image = self.panel_bg_image
