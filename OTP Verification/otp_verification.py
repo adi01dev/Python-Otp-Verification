@@ -29,7 +29,6 @@ class OTPApp:
         self.root.title("OTP Verification")
         self.root.geometry("800x500")
         self.root.resizable(False, False)
-        # self.root.configure(bg="#181818")
         
         self.bg_image = ImageTk.PhotoImage(Image.open("Images/root_bg.jpg"))
         self.bg_label = tk.Label(self.root, image=self.bg_image)
